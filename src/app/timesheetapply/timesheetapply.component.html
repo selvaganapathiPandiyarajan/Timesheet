@@ -1,0 +1,146 @@
+<app-header> </app-header>
+<app-sidenav></app-sidenav>
+<body>
+    <div class="row">
+        <div class="col-6 col-md-4 bannerimg">
+            
+        
+               
+                    <div class="welcomeText">
+                        <span class="userName" >selva-(26820)</span>
+                    </div>     
+        </div>
+        <div class="col-6 col-md-4 bannerimgOne">
+            <div class="projectDetails">
+            <span  class="userName" style="margin-left: -82px;
+">{{this.hoursDetailsValue[0]  | date:'MMM-dd' }} to {{this.hoursDetailsValue[6]  | date:'MMM-dd'}}</span>
+<span class="userName" style="float: right;">Status:opened</span>
+        </div>
+    
+        </div>
+      </div>
+    <div class="col-12 container">
+        <div class="row">
+            <div class="col-2 subclass">
+                <p class="iconStyle">Project</p>
+                <input type="text" class="SelectStyle" value="{{this.userDetailsvalue.TeamName}}" readonly>
+            </div>
+            <div class="col-2 subclass ">
+                <p class="iconStyle">Activity</p>
+            <input type="text" class="SelectStyle">
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[0]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="monValue">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[1]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="tueValue">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[2]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="wedValue">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[3]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="thursValue">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[4]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="friValue" (keyup)="getHoursvalue()">
+            <i class='bx bxs-message'></i>
+            </div> &nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">Total</p>
+            <input type="text" class="inputStyle" value="{{this.totalHoursValue}}">
+            </div>
+            
+          </div>
+          <div class="row" *ngIf="this.LeaveDetails[0]">
+            <div class="col-2 subclass">
+                <p class="iconStyle">Project</p>
+                <input type="text" class="SelectStyle" value="{{this.userDetailsvalue.TeamName}}" readonly>
+            </div>
+            <div class="col-2 subclass ">
+                <p class="iconStyle">Activity</p>
+            <input type="text" class="SelectStyle">
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[0]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="monValueOne" value="{{this.LeaveDetails[0].Date === this.hoursDetailsValue[0] ? 8 : 0}}">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[1]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="tueValueOne" value="{{this.LeaveDetails[0].Date === this.hoursDetailsValue[1] ? 8 : 0}}">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[2]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="wedValueOne" value="{{this.LeaveDetails[0].Date === this.hoursDetailsValue[2] ? 8 : 0}}">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[3]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="thursValueOne" value="{{this.LeaveDetails[0].Date === this.hoursDetailsValue[3] ? 8 : 0}}">
+            <i class='bx bxs-message'></i>
+            </div>&nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">{{this.hoursDetailsValue[4]  | date:'MMM-dd' }}</p>
+            <input type="text" class="inputStyle" id="friValueOne" value="{{this.LeaveDetails[0].Date === this.hoursDetailsValue[4] ? 8 : 0}}">
+            <i class='bx bxs-message'></i>
+            </div> &nbsp;
+            <div class="col-1 subclass ">
+                <p class="iconStyle">Total</p>
+            <input type="text" class="inputStyle" value="{{this.totalleaveHoursValue || 0}}">
+            </div>
+            
+          </div>
+
+          <div class="row"> 
+            <input class="totalInput"  value="{{this.totalMyHoursdetails}}">
+            <button class="btnStyle" (click)="getApplyHoursdetails()">Submit</button>
+          </div>
+
+
+    </div>
+    <h3 class="titleStyle">Apply Leave here</h3>
+    <div class="col-12 containerOne">
+        <div class="row">
+            <div class="col-2 subclass">
+                <p class="iconStyle">Project</p>
+                <input type="text" class="SelectStyle" value="{{this.userDetailsvalue.TeamName}}">
+            </div>
+            <div class="col-2 subclass">
+                <p class="iconStyle">Type of Leave</p>
+               <select class="dropStyle" id="leavetype">
+               <option>Sick Leave</option>
+               <option>Causal Leave</option>
+               <option>Privillage Leave</option>
+               <option>option Leave</option>
+            </select>
+
+            </div>
+            <div class="col-2 subclass">
+                <p class="iconStyle">Reason</p>
+<textarea class="textStyle" id="reason">
+
+</textarea>            </div>
+<div class="col-2" style="margin-left: 300px;margin-top: 21px;">
+    <p class="iconStyle">Date</p>
+    <input type="date" class="SelectStyle" id="dateofleave">
+
+</div>
+          </div>
+          
+          <div class="row"> 
+            <button class="btnStyle" (click)="applyLeave()">Apply</button>
+          </div>
+
+   </div>
+    
+</body>

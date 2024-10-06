@@ -1,0 +1,116 @@
+body{
+
+  font-family: "Exo", sans-serif;
+ width:100%;
+ overflow:hidden
+}
+.container
+{
+    margin-top: 50px;
+    width:100%;
+    height: 350px;
+    border: 2px solid red;
+}
+.subclass
+{
+margin-top: 20px;  
+margin-left: 24px;
+
+}   
+
+.iconStyle
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+.btnStyle
+{
+    width: 109px;
+    /* float: right; */
+    /* text-align: center; */
+    margin-left: 91%;
+    margin-top: 36px;
+    border: 1px solid firebrick;
+    background-color: #f75b5b;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+.SelectStyle
+{
+    width: 200px;
+    height: 45px;
+    text-align: center;
+}
+.bannerimg{
+    margin-left:60px;
+    width: 50%;
+    height:46px;
+       background-image: linear-gradient(to right, #ffb2b2,#ff9999,#ff7f7f,#ff6666);
+       margin-top: 40px;
+     
+   }
+   .bannerimgOne{
+       
+       width: 45%;
+       height:46px;
+          background-image: linear-gradient(to right, #ff6666,#ff4c4c,#ff7f7f,#ffb2b2);
+          margin-top: 40px;
+          border: none;
+      }
+      .userName
+{
+   
+    cursor: pointer;
+    font-family: Exo-bold;
+    font-size: 23px;
+     color: #ffffff;
+     font-weight: bold;
+}
+.inputStyle
+{
+    width: 66px;
+    height: 40px;
+    text-align: center;
+}
+.dropStyle
+{
+    width: 200px;
+    height: 47px;
+    text-align: center;
+}
+.badge {
+    background-color: red !important;
+    color: white !important;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .textStyle
+  {
+    width: 500px;
+    height: 47px;
+    padding-left: 20px;
+  }
+  .titleStyle
+  {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .containerOne
+{
+    margin-top: 25px;
+    width: 78%;
+    height: 200px;
+    border: 2px solid red;
+    margin-left: 182px;
+}
+.totalInput
+{
+    width: 65px;
+    float: right;
+    margin-left: 1219px;
+    margin-top: 20px;
+    height: 36px;
+}

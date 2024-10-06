@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #f1eded;
+
+  font-family: "Exo", sans-serif;
+ width:100%;
+ overflow:hidden
+}
+.bannerimg{
+ margin-left:60px;
+ width: 50%;
+ height:100px;
+    background-image: linear-gradient(to right, #ffb2b2,#ff9999,#ff7f7f,#ff6666);
+    margin-top: 30px;
+    border-right: 2px solid  white;
+  
+}
+.bannerimgOne{
+    
+    width: 45%;
+    height:100px;
+       background-image: linear-gradient(to right, #ff6666,#ff4c4c,#ff7f7f,#ffb2b2);
+       margin-top: 30px;
+       border: none;
+   }
+.row {
+    --bs-gutter-x: -0.5rem !important;
+}
+.user
+{
+    font-size: 96px;
+    padding-top: 4px;
+    padding-left: 20px;
+    color: gray;
+}
+.welcomeText
+{
+  
+margin-left: 150px;
+margin-top: -90px;
+}
+.userName
+{
+   
+    cursor: pointer;
+    font-family: Exo-bold;
+    font-size: 23px;
+     color: #ffffff;
+     font-weight: bold;
+}
+.welcometextStyle
+{ 
+     font-family: Exo-Regular;
+    font-size: 18px;
+    color:white;
+
+}
+.projectDetails
+{
+    margin-top: 15px;
+    margin-left: 30px;
+    color:white;
+    font-size:22px;
+    font-family: Exo-Regular;
+}
+.scrolStyle
+{
+    margin-top: 20px;  
+}
+.scrolImage
+{
+    width: 70%;
+    height: 130px;
+    margin-left: 60px;
+    position: relative;
+   
+   
+}
+.Imageone
+{
+    width:100%;
+    height:380px;
+   filter: blur(10px);
+   border: 1px solid #ddd;
+}
+.text-overlay {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ color:  #510441; 
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+    font-size: 36px;
+    font-weight: bold;
+  }
+.container
+{
+    width:365px;
+    background-color: #fff;
+    height: 280px;
+    border: 1px solid #ccc;
+}
+.list_Style
+{
+   list-style: none; 
+    color: #6e6e6e;
+ font-size: 17px;
+ font-family: Exo-Regular;
+
+}
+.order_List
+{
+    margin-top:2px;
+    border-bottom: 1px  dashed #ddd;
+ 
+}
+.icon_style
+{
+    font-size: 25px;
+   
+}
+.icon_styleOne
+{
+    font-size: 25px;
+  float: right;
+
+}
+.text
+{
+    position: absolute;
+}
+/* image-slider.component.css */
+.navigation {
+    position: relative;
+    margin-top: -200px; /* Adjust as needed */
+    display: flex;
+    justify-content: space-between;
+}
+
+.previous,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.previous {
+    left: 120px;
+}
+
+.next {
+    right: 120px;
+}
+.arrow
+{
+    font-size: 50px;
+
+}
+.calenderStyle
+{
+    margin-top: -970px;
+    margin-left:62px;
+  width:93%;
+  
+}
+.semi-container
+{
+    width:365px;
+    background-color: #fff;
+    height: 350px;
+    border: 1px solid #ccc;
+    margin-left: 28px;
+    margin-top:10px;
+}
+.square-box {
+    width: 140%;
+    padding-top: 100%; /* Maintain 1:1 aspect ratio */
+ /* Example background color */
+    /* Additional styling as needed */
+}
+.topRow
+{
+    margin:20px 10px 10px 30px;
+    
+}
+.textPoint
+{
+    color:white;
+    margin-top: -64px !important;
+
+}
+.appstoreStyle
+{
+    color: #3E3E3E;
+    font-size: 18px;
+    font-family: Exo-bold;
+    font-weight: bold;
+    margin-left:20px;
+    margin-top:10px
+}
+.circleNotification
+{
+    float: right;
+    border: 1px solid #479ad5;
+    font-size: 16px;
+    color: #479ad5;
+    border-radius: 19px;
+    background: #daecf8;
+    font-family: Exo-Medium;
+    padding: 2px 17px;
+ 
+}
+.calenderDiv
+{
+
+background-color: #fff; 
+border-left: 1px solid #ccc;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+
+}
+.calenderTitle
+{
+    color: #3E3E3E;
+    font-size: 20px;
+    font-family: Exo-bold;
+    padding-left: 30px !important;
+    padding-top: 22px;
+    font-weight: bold;
+}
+.dashStyle
+{
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:35px;
+
+}
+.dashText
+{
+    font-size:20px;
+    font-family: "Exo-medium";
+}
+.calendar-container {
+    position: relative;
+    display: flex;
+  }
+
+  
+  #calendar {
+    /* Adjust width and other styles as needed */
+    flex: 1;
+  }
+  
+  .custom-table {
+    /* Adjust positioning and other styles as needed */
+    width: 80%; /* Example width */
+    margin-left: 20px;
+    margin-left: 20px; /* Example margin */
+  }
+  .tableStyle
+  {
+    margin-top: 133px;
+    width: 114px;
+  }
+  .tableRow
+  {
+   
+    padding-top: 8px;
+    padding-left: 45px;
+    height: 112px;
+    border: 1px solid #ddd;
+    font-family: 30px;
+  }
+  .tableRowOne
+  {
+    padding-top: 8px;
+    padding-left: 45px;
+    height: 126px;
+    border: 1px solid #ddd;
+    
+  }
+ .editDiv
+ {
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc ;
+    border-bottom: 1px solid #ccc ;
+ }
+ .editIcon
+ {
+    font-size: 22px !important;
+ }
+ .actionDiv
+ {
+
+    width: 361px;
+    margin-left: 31px;
+    height: 350px;
+    margin-top: 14px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+ }
+ .split-text {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .split-text:first-child {
+    margin-bottom: -2px; /* Adjust as needed to align "h" and "i" */
+  }
+  .icondate{
+    background-color: #879ab3;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    color:#fff;
+    margin-left: 20px;
+    width: 60px;
+  }
+  .texticon{
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    font-family: 'Exo-Bold';
+    margin-left: 20px;
+    color: #666699;
+    font-weight: bold;
+    width: 60px;
+  }
+  .inputField
+  {
+    height: 68px;
+    margin-right: 20px;
+}
+.videoIcon
+{
+    position: absolute;
+    /* float: right; */
+    margin-left: 312px !important;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 23px;
+}

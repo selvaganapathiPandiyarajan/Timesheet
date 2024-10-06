@@ -1,0 +1,122 @@
+<app-header> </app-header>
+<app-sidenav></app-sidenav>
+<body>
+    <div class="row">
+        <div class="col-6 col-md-4 bannerimg">
+            
+        
+               
+                    <div class="welcomeText">
+                        <span class="userName" >{{this.userDetailsvalue.firstname}}-{{this.userDetailsvalue.empid}}</span>
+                    </div>     
+        </div>
+        <div class="col-6 col-md-4 bannerimgOne">
+            <div class="projectDetails">
+            <span  class="userName" style="margin-left: -82px;
+">Hours History</span>
+        </div>
+    
+        </div>
+      </div>
+    <section class="mt-4 sectiontable">
+        <div class="card shadow border-0 mb-7">
+          <div class="card-header">
+          
+            <div>
+       
+              <input class="mx-2 inp" type="text" placeholder="Global Search" [(ngModel)]="search" />
+              <i class="bx bx-filter-alt search_icon" aria-hidden="true" style="float: right;"></i>
+            </div>
+        
+          </div>
+          <button class="create_Btn">2024</button>
+       
+          <div class="table-responsive">
+            <table class="table table-hover table-nowrap" id="excel-table">
+              <thead class="thead-dark" >
+                <tr style="font-size: 18px;font-weight: bold;color:#fff">
+                  <th scope="col" class="table_style">Group</th>
+                  <th scope="col" class="table_style">Date From</th>
+                  <th scope="col" class="table_style">Date To</th>
+                  <th scope="col" class="table_style">Billable</th>
+                  <th scope="col" class="table_style">Unpaid</th>
+                  <th scope="col" class="table_style">Total Hours</th>
+
+                  
+                  <th scope="col" class="table_style">Status
+   
+      
+                  </th>
+
+                  <th cope="col" class="table_style">Approved by</th>
+                  <th cope="col" class="table_style">Remark</th>
+                </tr>
+      
+              </thead>
+              <tbody style="font-size:20px" *ngFor="let data of Hoursdata | filter:search">
+                <tr>
+        
+                  <td  style="font-size:16px">{{data.project}}</td>
+                  <td  style="font-size:16px">{{data.datefrom}}</td>
+                  <td  style="font-size:16px">{{data.dateto}}</td>
+                  <td  style="font-size:16px">{{data.Total}}</td>
+                  <td  style="font-size:16px">{{data.leaveHour}}</td>
+                  <td  style="font-size:16px">{{calculateTotal(data.leaveHour,data.Total)}}</td>
+                  <td><span class="badge badge-pill bg-soft-success text-black me-2"
+                    style="font-weight: bold;margin-left: 10px; background-color: yellow;font-size: 12px;" *ngIf="data.status == 'pending'">pending</span></td>
+
+                    <td>{{this.userDetailsvalue.CM}}</td>
+
+
+
+        
+    
+      
+                  <td><span class="badge badge-pill bg-soft-success text-black me-2"
+                    style="font-weight: bold;margin-left: 10px; background-color: yellow;font-size: 12px;"></span></td>
+                <td ><span
+                    class="badge badge-pill bg-soft-warning text-black me-2"
+                    style="font-weight: bold;margin-left: 10px; background-color: green; font-size: 12px;"></span></td>
+                <td ><span class="badge badge-pill  text-black me-2"
+                    style="font-weight: bold;margin-left: 10px; background-color: red;font-size: 12px;"></span></td>
+                      <td ><span
+                        class="badge badge-pill  text-black me-2"
+                        style="font-weight: bold;  background-color: green; font-size: 12px;"></span></td>
+                    <td ><span
+                        class="badge badge-pill  text-black me-2"
+                        style="font-weight: bold; background-color: yellow;font-size: 12px;"></span></td>
+                    <td ><span
+                        class="badge badge-pill  text-black me-2"
+                        style="font-weight: bold;  background-color: red;font-size: 12px;"></span></td>
+      <td>
+                </tr>
+      
+      
+              </tbody>
+            </table>
+          </div>
+          <!-- Footer -->
+          <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+              <!-- Left -->
+        
+      
+              <div>
+                <a class="me-4 text-reset">
+                  <!-- <pagination-controls (pageChange)="pageChangeEvent($event)"></pagination-controls> -->
+                </a>
+              </div>
+              <!-- Right -->
+            </section>
+      
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(235, 227, 227, 0.05);">
+        
+            </div>
+            <!-- Copyright -->
+          </footer>
+          <!-- Footer -->
+        </div>
+      </section>   
+</body>

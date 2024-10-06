@@ -1,0 +1,53 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+.fc-button.fc-today-button {
+    display: none !important;
+}
+.fc .fc-toolbar-title
+{
+    font-size: 20px !important;
+    color: black;
+    font-family: 'Exo-Bold';
+    font-weight: bold;
+}
+.fc .fc-button-primary 
+{
+    margin-left: 172px;
+    background-color: #ccc;
+    border-radius: 20px;
+    color: black;
+    border: 2px solid;
+    margin-right: 176px;
+}
+.fc-next-button {
+    margin-right: 10px;
+}
+.fc .fc-col-header-cell-cushion {
+
+    color: #fff;
+    text-decoration: none;
+}
+.fc-col-header
+{
+    background-color: #4d4949;
+}
+.fc .fc-daygrid-day-number {
+    color: #1f265d;
+    text-decoration: none;
+    font-weight:bold;
+}
+.fc-day-sat.fc-daygrid-day,.fc-day-sun.fc-daygrid-day
+{
+    background: repeating-linear-gradient(0deg, #ffffff 0, #ffffff 20%, transparent 0, transparent 50%),repeating-linear-gradient(135deg, #e15555 0, #ec5555 5%, transparent 0, transparent 50%);
+    background-size: 0.4em 0.4em;
+    background-color: #ffffff;
+    opacity: 1
+}
+.fc-event
+{
+    height:20px
+}
+.fc .fc-daygrid-day.fc-day-today
+{
+    background-color:#d4d9f3 ;
+}

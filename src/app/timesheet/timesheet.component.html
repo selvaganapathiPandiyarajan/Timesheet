@@ -1,0 +1,170 @@
+<app-header></app-header>
+<app-sidenav></app-sidenav>
+<body>
+<div class="row">
+    <div class="col-6 col-md-4 bannerimg">
+        
+        <div class="">
+           
+                <i class='bx bxs-user-circle user'> </i>
+                <div class="welcomeText">
+                    <span class="welcometextStyle" >Welcome</span><br/>
+                    <span class="userName" >{{this.userDetailsvalue.firstname}}-{{this.userDetailsvalue.empid}} &nbsp;&nbsp;&nbsp;<i class='bx bxs-edit'></i>  </span>
+                </div>
+              
+      
+     
+   
+        </div>
+        
+    </div>
+    <div class="col-6 col-md-4 bannerimgOne">
+        <div class="projectDetails">
+        <span style="font-size: 18px;">Allocated Project Details(click to view details)</span><br/>
+        <span style="font-weight: bold;">{{this.userDetailsvalue.TeamName | uppercase}}</span>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="row scrolStyle">
+    <div class="col-sm-8 scrolImage" *ngFor="let image of images" [hidden]="image !== images[currentIndex]">
+       
+        <img  [src]="image.img" class="Imageone" />
+        <div class="text-overlay">{{image.text}}</div>
+        
+        <div class="navigation">
+            <span (click)="showPreviousImage()" class="previous"><i class='bx bx-left-arrow-alt arrow'></i></span>
+            <span (click)="showNextImage()" class="next"><i class='bx bx-right-arrow-alt arrow' ></i></span>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="container">
+            <p class="appstoreStyle">My Approvals</p>
+            <ul class="list_Style">
+                <li  class="order_List"><i class='bx bxs-time icon_style'></i>&nbsp;&nbsp;Time sheet&nbsp;<span class="circleNotification">2</span></li>
+                <li  class="order_List" style="margin-top: 20px;">
+                    
+                    <i class='bx bx-line-chart icon icon_style'></i>&nbsp;&nbsp;Performance&nbsp;<span class="circleNotification">2</span></li>
+                <li  class="order_List" style="margin-top: 20px;"> <i class='bx bx-group icon icon_style'></i>&nbsp;&nbsp;Employee referral&nbsp;<span class="circleNotification">2</span></li>
+                <li  class="order_List" style="margin-top: 20px;"> <i class='bx bx-exit icon icon_style'></i>&nbsp;&nbsp;Exit Mangement&nbsp;<span class="circleNotification">2</span></li>
+            </ul>
+        </div>
+        <div class="semi-container">
+                <p class="appstoreStyle">App Store</p>
+                <div class="row topRow">
+                    <div class="col-4">
+                        <!-- Upper left box -->
+                        <div class="square-box" style="background-color: #666699;"><p class="textPoint" style="margin-left: 28px;">CenterPoint</p></div>
+                    </div>
+                    <div class="col-4" style="margin-left:50px">
+                        <!-- Upper right box -->
+                        <div class="square-box" style="background-color: #00A596;"><p class="textPoint"  style="margin-left: 58px;">PMS</p></div>
+                    </div>
+                </div>
+                <div class="row topRow">
+                    <div class="col-4 ">
+                        <!-- Lower left box -->
+                        <div class="square-box" style="background-color: #479AD5; "><p class="textPoint"  style="margin-left: 28px;">Learning Portal</p></div>
+                    </div>
+                    <div class="col-4 "style="margin-left:50px">
+                        <!-- Lower right box -->
+                        <div class="square-box" style="background-color: #585756;"><p class="textPoint"  style="margin-left: 48px;">E portal</p></div>
+                    </div>
+                </div>
+            </div>
+             
+             <div class="actionDiv" >
+            <p class="calenderTitle">My Action</p>
+            <ul class="list_Style">
+                <li  class="order_List" style="   color:#e10db7;
+                font-weight:bold;" routerLink="/Leavelist">Leave Management</li>
+                <li  class="order_List" style="margin-top: 20px;   color:#12cde1;
+                font-weight:bold;" routerLink="/HolidayList">
+                    
+                    Holiday Management</li>
+                <li  class="order_List" style="margin-top: 20px;   color:#0b4d05;
+                font-weight:bold;" routerLink="/Timesheet"> Timesheet Management</li>
+           <li  class="order_List" style="margin-top: 20px;   color:#6314a4;
+           font-weight:bold;" routerLink="/Pms"> Performance Management</li>
+               <li  class="order_List" style="margin-top: 20px;   color:#d3a911;
+               font-weight:bold;"  routerLink="/Employeerefer"> Referral Management</li>
+                <li  class="order_List" style="margin-top: 20px;   color:#af103d;
+                font-weight:bold;" routerLink="/Exit"> Exit Management</li>
+            </ul>
+
+                  </div>
+                  <div class="actionDiv" >
+                    <p class="calenderTitle">Upcoming Events</p>
+                    <div class="input-group mb-3" *ngFor="let event of Eventdata">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text split-text icondate">{{event.Date.split('.')[0]}}</span>
+                            <span class="input-group-text split-text texticon">{{getMonthCalender(event.Date.split('.')[1])}}</span>
+                        </div>
+                        <a href="{{event.meetingLink}}">
+                        <input type="text" class="form-control inputField" id="basic-url" aria-describedby="basic-addon3" value="{{event.Eventname}}"></a>
+                        <i class='bx bxs-video videoIcon'></i>
+                      </div>
+        
+                          </div>
+        </div>
+   
+</div>
+<div class="row calenderStyle " >
+    <div class="col-sm-8 calenderDiv ">
+     
+        <p class="calenderTitle">TimeSheet</p>
+        <full-calendar [options]="calendarOptions" >
+            <ng-template #eventContent let-arg>
+              <p style="width:5px">{{ arg.event.title }}</p>
+            </ng-template>
+
+           
+          </full-calendar>
+       
+          <div>
+            <span>
+                <span class="dashStyle" style="color:#2b7ae0;">-</span> &nbsp;
+                <span class="dashText">Draft</span>
+            </span>
+            <span>
+                <span class="dashStyle" style="color:green;margin-left:40px">-</span>&nbsp;
+                <span class="dashText">Approved</span>
+            </span>
+            <span>
+                <span class="dashStyle" style="color:#ffcc00;margin-left:40px">-</span>&nbsp;
+                <span class="dashText">Holiday</span>
+            </span>
+            <span>
+                <span class="dashStyle" style="color:red;margin-left:40px">-</span>&nbsp;
+                <span class="dashText">Rejected</span>
+            </span>
+        </div>
+        
+         
+         
+    </div>
+    <div class="col-sm-1 editDiv" >
+  <!-- timesheet.component.html -->
+  <table class="tableStyle">
+    <thead>
+      <tr>
+        <th scope="col" style="background-color: #4d4949">&nbsp;</th>
+   
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of [1,2,3,4,5,6]" >
+        <th scope="row" class="tableRowOne"><i class='bx bxs-edit editIcon' (click)="onEditClick()"></i></th>
+      </tr>
+
+    </tbody>
+  </table>
+  
+        <!-- <i class='bx bxs-edit'></i>  -->
+        <!-- <i class='bx bxs-edit'></i> 
+        <i class='bx bxs-edit'></i>  -->
+        </div>
+       
+</div>
+</body>

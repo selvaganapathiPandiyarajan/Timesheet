@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    background-color: #f1eded;
+
+  font-family: "Exo", sans-serif;
+ width:100%;
+ height:100vh;
+ overflow:hidden
+}
+.container
+{
+    margin-top:50px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.holiday_title
+{
+    font-weight: bold;
+    color: #3E3E3E;
+    font-size: 25px;
+    font-family: Exo-bold;
+    text-align: center;
+    margin-top:35px
+}
+.tableStyle th
+{
+    background-color: #3E3E3E !important;
+    color:white;
+    font-size:18px;
+    font-family: Exo-bold;
+    font-weight:bold;
+   margin-top: 50px;
+}
+.LocationStyle
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: darkorchid;
+    margin-top: 20px;
+
+}
+.downloadIcon
+{
+    float: right;
+    font-size: 36px;
+    margin-top: -83px;
+    color: #e10db7
+}

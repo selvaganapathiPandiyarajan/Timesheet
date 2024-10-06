@@ -1,0 +1,32 @@
+<app-header> </app-header>
+<app-sidenav></app-sidenav>
+<body>
+    <div class="col-sm-12"  >
+        <h3 class="holiday_title">Holiday List for 2024</h3>
+        <div class="container">
+            
+            <i class='bx bxs-download downloadIcon' (click)="openPDF()"></i>
+            <h6 class="LocationStyle">US Account</h6>
+            <table class="table" style="margin-top: 20px;" id="holidayTable">
+                <thead class="tableStyle">
+                    <tr>
+                        <th scope="col">Holiday</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Remark</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let data of holidayData">
+                    <tr *ngIf="data.Remark === 'Us Account'">
+                        <th scope="row">{{data.Holiday}}</th>
+                        <td>{{data.Date}}</td>
+                        <td>{{data.Remark}}</td>
+                 
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+   
+    </div>
+    
+</body>

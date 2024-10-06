@@ -1,0 +1,100 @@
+body{
+    background-color: #f1eded;
+
+  font-family: "Exo", sans-serif;
+ width:100%;
+ height:100vh;
+ overflow:hidden
+}
+.Casualcard
+{
+background-color: #ACE1AF; 
+border: 2px solid #00693E;
+}.sickcard
+{
+    background-color: #f6c8c2; 
+    border: 2px solid #b30226;
+}
+.Casualcard-title
+{
+    
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+}
+.Casualcardtext
+{
+  
+    text-align: center;
+    font-size: 25px; 
+    margin-top: 30px;
+}
+.TotalHolidaytext
+{
+  
+    text-align: center;
+    font-size: 25px; 
+    margin-top: 30px;
+}
+.plCard
+{
+    background-color: #DDA0DD; 
+    border: 2px solid #800080;
+}
+.optionCard
+{
+    background-color: #b4e4e4; 
+    border: 2px solid #06b8b8;  
+}
+.totalCard
+{
+    background-color: #f8f3ac; 
+    border: 2px solid #fae60a;  
+}
+.balanCard
+{
+  background-color: #d3caf5; 
+    border: 2px solid #8767f8;   
+}
+
+.sectiontable
+{
+    margin-left: 111px;
+    margin-right: 57px;
+}
+.inp {
+    border:none;
+    border: 3px solid  #5e5e5e;;
+    padding: 10px 10px;
+    outline: none;
+    float: right;
+  }
+  .search_icon
+{
+  float:right;
+  margin-top:13px;
+  font-size:30px
+}
+.table_style
+{
+  font-size: 17px;font-weight: 500;
+  background-color: rgb(111, 111, 111);
+  border-right: 2px solid #fff;
+  padding-left: 20px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+}
+.create_Btn
+{
+  width: 125px;
+  height: 37px;
+  border: 2px solid #ad1fff;
+  background-color: #ad1fff;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <form [formGroup]="loginForm">
+      <div class="image-logo">
+      <img src="assets\logo.png" class="logoimg">
+    </div>
+      <h1> &nbsp;&nbsp;Login</h1>
+      <div class="input-box">
+       <input type="text" placeholder="Username" formControlName="email" (keyup)="getPasswordValue()">
+       <i class='bx bxs-user'></i>
+       <div *ngIf = "loginForm.controls['email'].hasError('required') && loginForm.controls['email'].touched" class="danger">
+        Email Name is Mandatory
+       </div>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="password"  id="password" value="{{typedofPassword}}" >
+        <i class='bx bxs-lock-alt'></i>
+
+       </div>
+       <div class="remember-forgot">
+        <label><input type="checkbox" (click)="rememberMe()"> Remember me</label>
+       </div>
+       <button type="submit" class="btn" (click)="login()">Login</button>
+    </form>
+  </div>
+</body>
+</html>

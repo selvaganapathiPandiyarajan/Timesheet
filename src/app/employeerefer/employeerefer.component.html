@@ -1,0 +1,193 @@
+<app-header> </app-header>
+<app-sidenav></app-sidenav>
+<body>
+    <div class="card shadow-5-strong cardStyle">
+
+        <div class="card-body py-5 px-md-5 cardBodyStyle" >
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg">
+              <p class="fw-bold mb-5" style="font-size: 24px;">Employee referral</p>
+              <form [formGroup]="referalForm">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example1">
+                        canditate First name
+                      </label>
+                      <input
+                        type="text"
+                        id="form3Example1"
+                        class="form-control inputStyle"
+                        placeholder="Enter First Name" formControlName="firstname"
+                      />
+               
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example2">
+                        Candiate Middle name
+                      </label>
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        class="form-control inputStyle"
+                        placeholder="Enter Last Name"
+                        formControlName="middlename"
+                      />
+                  
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example2">
+                        canditate Last name
+                      </label>
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        class="form-control inputStyle"
+                        placeholder="Enter Last Name"
+                        formControlName="lastname"
+                      />
+                  
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example1">
+                       Email
+                      </label>
+                      <input
+                        type="text"
+                        id="form3Example1"
+                        class="form-control inputStyle"
+                        placeholder="Enter Email Address"
+                        formControlName="email" 
+                      />
+              
+                     
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example2">
+                       Address
+                      </label>
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        class="form-control inputStyle"
+                        placeholder="Enter Phone Number"
+                        formControlName="contact"
+                      />
+             
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example2">
+                       Phone
+                      </label>
+                      <input
+                        type="number"
+                        id="form3Example2"
+                        class="form-control inputStyle"
+                        placeholder="Enter Phone Number"
+                        formControlName="phone"
+                      />
+             
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example1">
+                        Experience
+                      </label>
+                      <input
+                        type="text"
+                        id=""
+                        class="form-control inputStyle"
+                        placeholder="Enter Experience"
+                        formControlName="experience"
+                      />
+   
+                    </div>
+                  </div>
+              
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example1">
+                        Skil/Specialization
+                      </label>
+                      <input
+                        type="text"
+                        id="skill"
+                        class="form-control inputStyle"
+                        placeholder="Enter Skill"
+                        formControlName="skill"
+                      />
+   
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div  class="form-outline">
+                    <label class="form-label labelStyle" for="form3Example2">
+                      Upload Resume
+                      </label>
+                      <input
+                        type="file"
+                        id="resume"
+                        class="form-control inputStyle"
+                        placeholder="Enter resume"
+                        formControlName="resume" 
+                      />
+
+                    </div>
+                  </div>
+                 
+                </div>
+                <button class="submitBrn" (click)="register()"><i class='bx bxs-send' style="font-size: 18px;"></i> &nbsp;Submit</button> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container" style="width:1500px">
+        <p class="fw-bold mb-5" style="font-size: 18px;margin-top: 20px;">List of Employee referral</p>
+            <table class="table">
+                <thead class="tableStyle">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Reffered By</th>
+                        <th scope="col">Contact no</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Skill</th>
+                        <th scope="col">Remark</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let data of referData">
+                    <tr>
+                        <td>{{data.firstname}}</td>
+                        <td>{{data.referedBy}}</td>
+                        <td>{{data.phone}}</td>
+                        <td>{{data.email}}</td>
+                        <td>{{data.experience}}</td>
+                        <td>{{data.contact}}</td>
+                        <td>{{data.skill}}</td>
+                        <td>{{"-"}}</td>
+
+                    </tr>
+            
+                </tbody>
+            </table>
+        </div>
+
+</body>
